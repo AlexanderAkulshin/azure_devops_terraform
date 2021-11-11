@@ -28,6 +28,3 @@ stages:
         Dockerfile: '**/Dockerfile'
         tags: |
           $(tag)
-
-
-    

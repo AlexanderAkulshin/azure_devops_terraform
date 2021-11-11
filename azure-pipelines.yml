@@ -22,10 +22,11 @@ stages:
     steps:
     - task: Docker@2
       inputs:
-        containerRegistry: 'alexanderakulshin_dockerhub'
-        repository: 'psh/weatherapi'
+        containerRegistry: 'alexanderakulshin_dockerhub_private'
+        repository: 'psh/weahterapi'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: |
           $(tag)
+
     

@@ -23,7 +23,7 @@ stages:
     - task: Docker@2
       inputs:
         containerRegistry: 'alexanderakulshin_dockerhub_private'
-        repository: 'psh/weahterapi'
+        repository: 'alexanderakulshin/weahterapi'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: |

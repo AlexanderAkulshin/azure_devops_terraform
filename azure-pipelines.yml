@@ -23,8 +23,18 @@ stages:
     - task: Docker@2
       inputs:
         containerRegistry: 'alexanderakulshin_dockerhub'
+        command: 'login'
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'alexanderakulshin_dockerhub'
         repository: 'alexanderakulshin/weatherapi'
-        command: 'buildAndPush'
+        command: 'build'
         Dockerfile: '**/Dockerfile'
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'alexanderakulshin_dockerhub'
+        repository: 'alexanderakulshin/weatherapi'
+        command: 'push'
         tags: |
           $(tag)
+
